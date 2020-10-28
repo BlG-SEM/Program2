@@ -5,8 +5,7 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Введите числа А, В, С");
-// читаем 3 переменные в любом порядке
+        System.out.println("Enter numbers А, В, С");
         double a = readNumber("a = ");
         double b = readNumber("b = ");
         double c = readNumber("c = ");
@@ -21,11 +20,11 @@ public class Main {
 
     private static void processProgression(double a, double b, double c) {
         if (b + (b - a) == c) {
-            System.out.printf("Это арифметическая прогрессия, d = %1$.1f", b - a);
+            System.out.printf("It's a arithmetic progression, d = %1$.1f", b - a);
         } else if (b * (b / a) == c) {
-            System.out.printf("Это геометрическая прогрессия, q = %1$.1f", b / a);
+            System.out.printf("It's a geometric progression, q = %1$.1f", b / a);
         } else
-            System.out.println("Последовательность не является прогрессией");
+            System.out.println("The sequence is not a progression");
     }
 
     private static void sortNumberInAscendingOrder(double a, double b, double c) {
