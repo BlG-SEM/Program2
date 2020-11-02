@@ -28,22 +28,10 @@ public class Main {
     }
  
     private static double[] sortNumbersInAscendingOrder(double a, double b, double c) {
-        if (a > b) {
-            a = a + b;
-            b = a - b;
-            a = a - b;
-        }
-        if (b > c) {
-            b = b + c;
-            c = b - c;
-            b = b - c;
-        }
-        if (a > b) {
-            a = a + b;
-            b = a - b;
-            a = a - b;
-        }
- 
+        a = Math.min(Math.min(a, b), c);
+        b = Math.max(Math.min(a, b), Math.min(Math.max(a, b), c);
+        c = Math.max(Math.max(a, b), c);
+
         return new double[]{a, b, c};
     }
  
