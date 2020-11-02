@@ -9,7 +9,11 @@ public class Main {
         double bNumber = readNumber("B = ");
         double cNumber = readNumber("C = ");
  
-        double[] arrOfSortedNumbers = sortNumbersInAscendingOrder(aNumber, bNumber, cNumber);
+        double[] arrOfSortedNumbers = { 
+             Math.min(Math.min(aNumber, bNumber), cNumber), 
+             Math.max(Math.min(aNumber, bNumber), Math.min(Math.max(aNumber, bNumber), cNumber)), 
+             Math.max(Math.max(aNumber, bNumber), cNumber)
+        };
  
         if (isArithmeticProgression(arrOfSortedNumbers)) {
             printPhrase("a arithmetic progression, d =",
@@ -25,14 +29,6 @@ public class Main {
         Scanner Scanner = new Scanner(System.in);
         System.out.printf("Enter %s", name);
         return Scanner.nextDouble();
-    }
- 
-    private static double[] sortNumbersInAscendingOrder(double a, double b, double c) {
-        return new double[] { 
-             Math.min(Math.min(a, b), c), 
-             Math.max(Math.min(a, b), Math.min(Math.max(a, b), c)), 
-             Math.max(Math.max(a, b), c)
-        };
     }
  
     private static boolean isArithmeticProgression(double[] arrOfSortedNumbers) {
