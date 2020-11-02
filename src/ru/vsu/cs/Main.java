@@ -28,11 +28,7 @@ public class Main {
     }
  
     private static double[] sortNumbersInAscendingOrder(double a, double b, double c) {
-        a = Math.min(Math.min(a, b), c);
-        b = Math.max(Math.min(a, b), Math.min(Math.max(a, b), c);
-        c = Math.max(Math.max(a, b), c);
-
-        return new double[]{a, b, c};
+        return new double[] { a = Math.min(Math.min(a, b), c), b = Math.max(Math.min(a, b), Math.min(Math.max(a, b), c)), c = Math.max(Math.max(a, b), c) };
     }
  
     private static boolean isArithmeticProgression(double[] arrOfSortedNumbers) {
