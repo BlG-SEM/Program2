@@ -29,9 +29,9 @@ public class Main {
  
     private static double[] sortNumbersInAscendingOrder(double a, double b, double c) {
         return new double[] { 
-             a = Math.min(Math.min(a, b), c), 
-             b = Math.max(Math.min(a, b), Math.min(Math.max(a, b), c)), 
-             c = Math.max(Math.max(a, b), c)
+             Math.min(Math.min(a, b), c), 
+             Math.max(Math.min(a, b), Math.min(Math.max(a, b), c)), 
+             Math.max(Math.max(a, b), c)
         };
     }
  
