@@ -4,11 +4,10 @@ import java.util.Scanner;
 import java.util.Locale;
 
 public class Main {
-     public static void main(String[] args) {
-        double[] arrNumbers = new double[3];
-        readNumber(arrNumbers);
+    public static void main(String[] args) {
+        double[] arrNumbers = {readNumber(), readNumber(), readNumber()};
         Arrays.sort(arrNumbers);
- 
+
         if (isArithmeticProgression(arrNumbers)) {
             printPhrase("a arithmetic progression, d =",
                     getCoefficientOfArithmeticProgression(arrNumbers[1], arrNumbers[0]));
@@ -18,15 +17,13 @@ public class Main {
         } else
             System.out.println("The sequence is not a progression");
     }
- 
-    private static void readNumber(double[] arrNumbers) {
+
+    private static double readNumber() {
         Scanner Scanner = new Scanner(System.in);
         System.out.println("Enter number");
-        for(int i = 0; i < 3; i++) {
-             arrNumbers[i] = Scaner.nextDouble();
-        }
+        return Scanner.nextDouble();
     }
- 
+
     private static boolean isArithmeticProgression(double[] arrNumbers) {
         double coefficient = getCoefficientOfArithmeticProgression(arrNumbers[1], arrNumbers[0]);
         return arrNumbers[1] + coefficient == arrNumbers[2];
